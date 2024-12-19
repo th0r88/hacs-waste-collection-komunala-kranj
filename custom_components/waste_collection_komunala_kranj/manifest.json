@@ -1,5 +1,5 @@
 {
-  "domain": "waste_collection__komunala_kranj",
+  "domain": "waste_collection_komunala_kranj",
   "name": "Waste Collection Komunala Kranj",
   "config_flow": true,
   "documentation": "https://github.com/th0r88/hacs-waste-collection-kranj",
