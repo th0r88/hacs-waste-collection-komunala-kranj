@@ -56,6 +56,8 @@ Home Assistant integration for Komunala Kranj waste collection schedule. Get not
 
 ## Dashboard Card
 
+![Dashboard card](images/dashboard_card.png "Dashboard card")
+
 1. Install Mushroom through HACS
 2. Add this card to your dashboard:
 
