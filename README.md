@@ -44,27 +44,18 @@ After installation, you can add this card to your dashboard:
 type: custom:auto-entities
 filter:
   include:
-    - entity_id: sensor.waste_collection_kranj
+    - entity_id: sensor.waste_collection_komunala_kranj
 card:
   type: custom:stack-in-card
   cards:
     - type: markdown
       content: >
-        {% set collections = state_attr('sensor.waste_collection_kranj',
-        'collections') %}
+        {% set collections = state_attr('sensor.waste_collection_komunala_kranj', 'collections') %}
         {% if collections %}
           {% for collection in collections %}
-            {% set color = collection.color %}
-            {% set date = collection.date %}
-            {% set type = collection.description %}
-            <div style="
-              padding: 10px;
-              margin: 5px;
-              background-color: {{ color }};
-              border-radius: 5px;
-              color: {% if color == '#f9df2e' %}black{% else %}white{% endif %};
-            ">
-              {{ date }} - {{ type }}
+            {% set color = collection.color | replace(" ", "") %}
+            <div style="padding: 10px; margin: 5px; background-color: {{color}}; border-radius: 5px; color: {% if color == '#f9df2e' %}black{% else %}white{% endif %};">
+              {{collection.date}} - {{collection.description}}
             </div>
           {% endfor %}
         {% else %}
