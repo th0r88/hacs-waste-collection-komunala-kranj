@@ -1,7 +1,7 @@
-"""Constants for the Waste Collection Kranj integration."""
-DOMAIN = "waste_collection_kranj"
+"""Constants for the Waste Collection Komunala Kranj integration."""
+DOMAIN = "waste_collection_komunala_kranj"
 
-DEFAULT_NAME = "Waste Collection Kranj"
+DEFAULT_NAME = "Waste Collection Komunala Kranj"
 DEFAULT_UPDATE_INTERVAL = 3600  # 1 hour in seconds
 
 # Configuration constants

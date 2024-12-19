@@ -1,4 +1,4 @@
-"""The Waste Collection Kranj integration."""
+"""The Waste Collection Komunala Kranj integration."""
 from __future__ import annotations
 
 import logging
@@ -14,7 +14,7 @@ PLATFORMS: list[Platform] = [Platform.SENSOR]
 _LOGGER = logging.getLogger(__name__)
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Set up Waste Collection Kranj from a config entry."""
+    """Set up Waste Collection Komunala Kranj from a config entry."""
     hass.data.setdefault(DOMAIN, {})
     hass.data[DOMAIN][entry.entry_id] = entry.data
 

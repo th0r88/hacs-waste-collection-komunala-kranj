@@ -1,4 +1,4 @@
-"""Config flow for Waste Collection Kranj integration."""
+"""Config flow for Waste Collection Komunala Kranj integration."""
 from __future__ import annotations
 
 import logging
@@ -19,7 +19,7 @@ _LOGGER = logging.getLogger(__name__)
 STEP_USER_DATA_SCHEMA = vol.Schema(
     {
         vol.Required("hsmid"): str,
-        vol.Optional("name", default="Waste Collection Kranj"): str,
+        vol.Optional("name", default="Waste Collection Komunala Kranj"): str,
     }
 )
 

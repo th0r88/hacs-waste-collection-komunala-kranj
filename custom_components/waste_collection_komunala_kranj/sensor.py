@@ -1,4 +1,4 @@
-"""Waste Collection Kranj sensor platform."""
+"""Waste Collection Komunala Kranj sensor platform."""
 from __future__ import annotations
 
 from datetime import datetime, timedelta
