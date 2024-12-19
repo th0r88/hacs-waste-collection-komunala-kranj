@@ -1,12 +1,12 @@
 {
   "domain": "waste_collection_komunala_kranj",
   "name": "Waste Collection Komunala Kranj",
-  "config_flow": true,
-  "documentation": "https://github.com/th0r88/hacs-waste-collection-kranj",
-  "dependencies": [],
   "codeowners": [],
-  "requirements": ["aiohttp"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/[your-username]/hacs-waste-collection-komunala-kranj",
+  "integration_type": "entity",
   "iot_class": "cloud_polling",
-  "version": "1.0.0",
-  "integration_type": "entity"
+  "requirements": ["aiohttp"],
+  "version": "1.0.0"
 }
