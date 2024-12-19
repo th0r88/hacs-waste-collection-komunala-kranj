@@ -1,0 +1,6 @@
+{
+    "name": "Waste Collection Komunala Kranj",
+    "render_readme": true,
+    "domains": ["sensor"],
+    "homeassistant": "2023.12.0"
+}

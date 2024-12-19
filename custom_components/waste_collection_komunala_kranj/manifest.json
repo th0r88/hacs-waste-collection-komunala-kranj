@@ -1,0 +1,11 @@
+{
+    "domain": "waste_collection_kranj",
+    "name": "Waste Collection Kranj",
+    "config_flow": true,
+    "documentation": "",
+    "dependencies": [],
+    "codeowners": [],
+    "requirements": ["aiohttp"],
+    "iot_class": "cloud_polling",
+    "version": "1.0.0"
+  }
