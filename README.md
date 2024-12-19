@@ -38,7 +38,8 @@ Home Assistant integration for Komunala Kranj waste collection schedule. Get not
 
 ## Dashboard Card
 
-After installation, you can add this card to your dashboard:
+1. Install Mushroom through HACS
+2. Add this card to your dashboard:
 
 ```yaml
 type: custom:auto-entities
@@ -46,20 +47,18 @@ filter:
   include:
     - entity_id: sensor.waste_collection_komunala_kranj
 card:
-  type: custom:stack-in-card
-  cards:
-    - type: markdown
-      content: >
-        {% set collections = state_attr('sensor.waste_collection_komunala_kranj', 'collections') %}
-        {% if collections %}
-          {% for collection in collections %}
-            {% set color = collection.color | replace(" ", "") %}
-            <div style="padding: 10px; margin: 5px; background-color: {{color}}; border-radius: 5px; color: {% if color == '#f9df2e' %}black{% else %}white{% endif %};">
-              {{collection.date}} - {{collection.description}}
-            </div>
-          {% endfor %}
-        {% else %}
-          <div style="padding: 10px; margin: 5px;">
-            No upcoming waste collections found
-          </div>
-        {% endif %}
+  type: custom:mushroom-template-card
+  alignment: left
+  secondary: |
+    {% for collection in state_attr('sensor.waste_collection_komunala_kranj', 'collections') %}{% if collection.description == "ODPADNA EMBALAŽA" %}🟡 {{collection.date}} - {{collection.description}}
+    {% elif collection.description == "BIOLOŠKI ODPADKI" %}🟤 {{collection.date}} - {{collection.description}}
+    {% elif collection.description == "MEŠANI KOMUNALNI ODPADKI" %}🟢 {{collection.date}} - {{collection.description}}
+    {% endif %}{% endfor %}
+  fill_container: true
+  multiline_secondary: true
+  card_mod:
+    style:
+      mushroom-template-card$:
+        ". mushroom-template-card-secondary": |
+          line-height: 2;
+          display: block;
