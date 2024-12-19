@@ -29,6 +29,24 @@ Home Assistant integration for Komunala Kranj waste collection schedule. Get not
 6. Search for "Waste Collection Kranj"
 7. Enter your household ID (hsMid)
 
+## List of household IDs (hsMid) - [source](https://www.komunala-kranj.si/ravnanje-z-odpadki/redni-odvoz-odpadkov)
+
+- Urnik 1A: KS Stražišče, KS Gorenja Sava, KS Besnica - (hsMid): **12258984**
+- Urnik 1B: KS Orehek-Drulovka, KS Mavčiče, KS Bitnje, KS Žabnica, KS Jošt - (hsMid): **12200404**
+- Urnik 2: KS Britof in KS Predoslje - (hsMid): **12201575**
+- Urnik 3A:  KS Golnik, KS Goriče, KS Trstenik, KS Struževo, del KS Center, del KS Vodovodni stolp, del KS Zlato polje - (hsMid): **12230630**
+- Urnik 3B:  KS Kokrica in KS Tenetiše - (hsMid): **12287577**
+- Urnik 4: del KS Huje, del KS Planina, del KS Primskovo - (hsMid): **12233027**
+- Urnik 5: del KS Bratov Smuk, del KS Huje, del KS Planina, del KS Primskovo - (hsMid): **12229976**
+- Urnik 6: del KS Center – staro mestno jedro - (hsMid): **12229623**
+- Urnik 7: del KS Center, del KS Vodovodni stolp, del KS Zlato polje - (hsMid): **12228716**
+- Urnik 8: del KS Podblica - (hsMid): **12299486**
+- Urnik 9: KS Čirče in KS Hrastje - (hsMid): **12239050**
+- Urnik Jezersko - (hsMid): **12318120**
+- Urnik Preddvor - (hsMid): **12307217**
+- Urnik Šenčur A - (hsMid): **12326572**
+- Urnik Šenčur B - (hsMid): **12327820**
+
 ## Configuration
 
 | Option | Type | Required | Default | Description |
