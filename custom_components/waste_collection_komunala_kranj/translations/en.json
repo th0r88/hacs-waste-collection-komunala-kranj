@@ -2,21 +2,38 @@
     "config": {
         "step": {
             "user": {
+                "title": "Waste Collection Komunala Kranj",
+                "description": "Set up your waste collection schedule",
                 "data": {
                     "hsmid": "Household ID (hsMid)",
                     "name": "Name"
-                },
-                "description": "Enter your Komunala Kranj household ID (hsMid)",
-                "title": "Waste Collection Kranj Setup"
+                }
             }
         },
         "error": {
-            "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
-            "invalid_auth": "[%key:common::config_flow::error::invalid_auth%]",
-            "unknown": "[%key:common::config_flow::error::unknown%]"
+            "cannot_connect": "Failed to connect to service",
+            "invalid_hsmid": "Invalid Household ID",
+            "unknown": "Unexpected error"
         },
         "abort": {
-            "already_configured": "[%key:common::config_flow::abort::already_configured_device%]"
+            "already_configured": "Device is already configured"
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "title": "Waste Collection Options",
+                "description": "Update your waste collection settings",
+                "data": {
+                    "hsmid": "Household ID (hsMid)",
+                    "name": "Name"
+                }
+            }
+        },
+        "error": {
+            "cannot_connect": "Failed to connect to service",
+            "invalid_hsmid": "Invalid Household ID",
+            "unknown": "Unexpected error"
         }
     }
 }

@@ -1,17 +1,15 @@
 """Waste Collection Komunala Kranj sensor platform."""
-from __future__ import annotations
-
 from datetime import datetime, timedelta
 import logging
 import xml.etree.ElementTree as ET
 
-import aiohttp # type: ignore
-import async_timeout # type: ignore
+import aiohttp
+import async_timeout
 
-from homeassistant.components.sensor import SensorEntity # type: ignore
-from homeassistant.config_entries import ConfigEntry # type: ignore
-from homeassistant.core import HomeAssistant # type: ignore
-from homeassistant.helpers.entity_platform import AddEntitiesCallback # type: ignore
+from homeassistant.components.sensor import SensorEntity
+from homeassistant.config_entries import ConfigEntry
+from homeassistant.core import HomeAssistant
+from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
 from .const import DOMAIN, BASE_URL
 
@@ -22,7 +20,7 @@ async def async_setup_entry(
     config_entry: ConfigEntry,
     async_add_entities: AddEntitiesCallback,
 ) -> None:
-    """Set up the Waste Collection Kranj sensor from config entry."""
+    """Set up the Waste Collection Komunala Kranj sensor from config entry."""
     name = config_entry.data["name"]
     hsmid = config_entry.data["hsmid"]
 
@@ -68,7 +66,7 @@ class WasteCollectionSensor(SensorEntity):
     @property
     def unique_id(self):
         """Return a unique ID."""
-        return f"waste_collection_kranj_{self._hsmid}"
+        return f"waste_collection_komunala_kranj_{self._hsmid}"
 
     async def async_update(self):
         """Fetch new state data for the sensor."""
